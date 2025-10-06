@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brew&Bean — Coffee Menu</title>
+  <style>
+    :root {
+      --bg: #f8ede3;
+      --card: #fff;
+      --accent: #b87333;
+      --muted: #6b5b4b;
+      --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: linear-gradient(180deg, #f8ede3 0%, #fff7ee 100%);
+      color: #2d1b10;
+      padding: 24px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      color: var(--accent);
+    }
+    p.lead {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .thumb {
+      height: 140px;
+      overflow: hidden;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .meta {
+      padding: 14px;
+    }
+    .meta h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+    .meta p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .price {
+      font-weight: bold;
+      color: var(--accent);
+      font-size: 15px;
+    }
+    section {
+      margin-top: 32px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=80" alt="Coffee logo">
+      </div>
+      <div>
+        <h1>Brew&Bean</h1>
+        <p class="lead">Freshly roasted • Locally brewed</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Coffee Menu</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Espresso"></div>
+        <div class="meta">
+          <h3>Espresso</h3>
+          <p>Strong and rich espresso shot</p>
+          <div class="price">$3.50</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=80" alt="Cappuccino"></div>
+        <div class="meta">
+          <h3>Cappuccino</h3>
+          <p>Espresso, milk, and foam</p>
+          <div class="price">$4.25</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Latte"></div>
+        <div class="meta">
+          <h3>Latte</h3>
+          <p>Smooth espresso with steamed milk</p>
+          <div class="price">$4.50</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1603728657357-d7f4ac8e0f1b?w=400&q=80" alt="Mocha"></div>
+        <div class="meta">
+          <h3>Mocha</h3>
+          <p>Chocolate-flavored latte</p>
+          <div class="price">$4.75</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1579969402803-47aefd0bfea3?w=400&q=80" alt="Americano"></div>
+        <div class="meta">
+          <h3>Americano</h3>
+          <p>Espresso with hot water</p>
+          <div class="price">$3.75</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pastries & Desserts</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1606813902914-2723f6b8c5c4?w=400&q=80" alt="Croissant"></div>
+        <div class="meta">
+          <h3>Butter Croissant</h3>
+          <p>Flaky and buttery French pastry</p>
+          <div class="price">$2.75</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1606312619348-4b5d948af9d0?w=400&q=80" alt="Muffin"></div>
+        <div class="meta">
+          <h3>Blueberry Muffin</h3>
+          <p>Soft muffin with fresh berries</p>
+          <div class="price">$3.00</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1589987607627-2a662e4d72c1?w=400&q=80" alt="Cinnamon Roll"></div>
+        <div class="meta">
+          <h3>Cinnamon Roll</h3>
+          <p>Warm and sweet with icing</p>
+          <div class="price">$3.25</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Brew&Bean — Crafted with love ☕
+  </footer>
+</body>
+</html>
