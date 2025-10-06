@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="lo">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ຮ້ານກາເຟຂອງຂ້ອຍ ☕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Noto Sans Lao', sans-serif;
+        }
+
+        body {
+            background-color: #f7f2ed;
+            color: #3e2f1c;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #3e2f1c;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c27b48;
+        }
+
+        .hero {
+            height: 70vh;
+            background: url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: #f0e0d6;
+        }
+
+        .menu-section {
+            padding: 60px 10%;
+            background-color: #fffdfb;
+        }
+
+        .menu-section h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #8b4513;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-card .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #3e2f1c;
+        }
+
+        .menu-card p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .menu-card .price {
+            font-weight: bold;
+            color: #8b4513;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #3e2f1c;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Coffee Shop ☕</h1>
+        <nav>
+            <a href="#">ໜ້າຫຼັກ</a>
+            <a href="#">ເມນູ</a>
+            <a href="#">ກ່ຽວກັບ</a>
+            <a href="#">ຕິດຕໍ່</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>ຍິນດີຕ້ອນຮັບສູ່ຮ້ານກາເຟຂອງພວກເຮົາ</h2>
+            <p>ສະບາຍດີໃນທຸກຈອກ ອົບອຸ່ນໃນທຸກຄວາມຮູ້ສຶກ</p>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2>ເມນູກາເຟຍອດນິຍົມ</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" alt="Espresso">
+                <div class="content">
+                    <h3>ອີສປຣະໂຊ</h3>
+                    <p>ກາເຟແທ້ສົດຂົ້ນ ກິ່ນຫອມສຸດໆ</p>
+                    <div class="price">₭20,000</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1572448862528-4a8b6731c9f6?auto=format&fit=crop&w=800&q=80" alt="Cappuccino">
+                <div class="content">
+                    <h3>ຄາປູຊີໂນ</h3>
+                    <p>ນົມຟອມອ່ອນຫວານ ລົດຊາດກົດກັນລົງຕົວ</p>
+                    <div class="price">₭25,000</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" alt="Latte">
+                <div class="content">
+                    <h3>ລາເຕ້ອາດສິດ</h3>
+                    <p>ກາເຟ້ນົມອ່ອນ ລົດຊາດລະມຸນ</p>
+                    <div class="price">₭23,000</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1528696892704-5e0e6fc25b22?auto=format&fit=crop&w=800&q=80" alt="Iced Coffee">
+                <div class="content">
+                    <h3>ກາເຟແຂງ</h3>
+                    <p>ກາເຟ້ເຢັນສົດຊື່ນ ເພື່ອວັນຮ້ອນໆ</p>
+                    <div class="price">₭22,000</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Mocha">
+                <div class="content">
+                    <h3>ໂມກ້າຊ໋ອກໂກແລັດ</h3>
+                    <p>ກາເຟ້ຊອກໂກແລັດຫວານຂົມກຳລັງດີ</p>
+                    <div class="price">₭28,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 My Coffee Shop. ສິດທິຂອງທຸກຢ່າງຖືກສົງວນ.</p>
+    </footer>
+</body>
+
+</html>
